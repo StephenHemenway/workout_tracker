@@ -1,0 +1,25 @@
+<div class="header">
+  <div class="container">
+    <!-- <img src="http://s3.amazonaws.com/codecademy-content/courses/learn-rails/img/logo-1m.svg"> -->
+    <h1><%= current_user.first_name %>'s Leg Workouts</h1>
+    <%= link_to 'New Leg Workout', "legworkouts/new" %>
+  </div>
+</div>
+
+<div class="legworkouts">
+  <div class="container">
+    <p></p>
+    <br>
+  	<% @legworkouts.reverse_each do |w| %> 
+			<div class="legworkout"> 
+  			<p class="content"><%= w.content %></p> 
+  			<p class="time"><%= w.created_at %></p> 
+        <%= link_to "View and Edit", legwork_path(w) %>
+      </div> 
+      <p><br></p>
+		<% end %>
+		<%= link_to 'New Leg Workout', "legworkouts/new" %>
+
+    <p><a href="/logout">Log out</a><p>
+  </div>
+</div>

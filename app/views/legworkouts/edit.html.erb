@@ -1,0 +1,14 @@
+
+<div class="workout">
+  <div class="container">
+    <h2>Edit Leg Workout</h2>
+    <br>
+    <%= form_for(@legworkout) do |f| %>
+      <%= f.text_area :content %>
+      <br>
+      <%= f.submit "Update", :class => "btn" %>
+    <% end %> 
+    
+  </div>
+</div> 
+

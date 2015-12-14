@@ -1,0 +1,14 @@
+
+<div class="backworkout">
+  <div class="container">
+    <h2>Edit Workout</h2>
+    <br>
+    <%= form_for(@backworkout) do |f| %>
+      <%= f.text_area :content %>
+      <br>
+      <%= f.submit "Update", :class => "btn" %>
+    <% end %> 
+    
+  </div>
+</div> 
+
